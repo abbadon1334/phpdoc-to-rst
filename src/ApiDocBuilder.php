@@ -207,7 +207,6 @@ final class ApiDocBuilder
             $this->parseTraits($file);
             $this->parseFunctions($file);
             $this->parseConstants($file);
-
         }
     }
 
