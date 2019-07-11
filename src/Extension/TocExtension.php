@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,7 +16,6 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
@@ -32,11 +29,10 @@ use PhpParser\Builder\Trait_;
 
 /**
  * This extension will render a list of methods  for easy access
- * at the beginning of classes, interfaces and traits
+ * at the beginning of classes, interfaces and traits.
  */
 class TocExtension extends Extension
 {
-
     /**
      * @param string      $type
      * @param FileBuilder $builder
@@ -58,22 +54,20 @@ class TocExtension extends Extension
                         /** @var Argument $argument */
                         foreach ($method->getArguments() as $argument) {
                             // TODO: defaults, types
-                            $args .= '$' . $argument->getName() . ', ';
+                            $args .= '$'.$argument->getName().', ';
                         }
-                        $args      = substr($args, 0, -2);
+                        $args = substr($args, 0, -2);
                         $modifiers = $method->getVisibility();
                         $modifiers .= $method->isAbstract() ? ' abstract' : '';
                         $modifiers .= $method->isFinal() ? ' final' : '';
                         $modifiers .= $method->isStatic() ? ' static' : '';
-                        $signature = $modifiers . ' ' . $method->getName() . '(' . $args . ')';
+                        $signature = $modifiers.' '.$method->getName().'('.$args.')';
 
-                        $builder->addLine('* ' . PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
-
+                        $builder->addLine('* '.PhpDomainBuilder::getLink('meth', $method->getFqsen(), $signature));
                     }
                     $builder->addLine()->addLine();
                 }
             }
         }
-
     }
 }

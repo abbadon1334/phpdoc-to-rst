@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,7 +16,6 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
@@ -27,15 +24,12 @@ use JuliusHaertl\PHPDocToRst\Builder\FileBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\PhpDomainBuilder;
 use JuliusHaertl\PHPDocToRst\Builder\RstBuilder;
 use phpDocumentor\Reflection\Php\Class_;
-use phpDocumentor\Reflection\Php\Interface_;
-use phpDocumentor\Reflection\Php\Trait_;
 
 /**
- * Add the fully qualified element name including the namespace to each page
+ * Add the fully qualified element name including the namespace to each page.
  */
 class AddFullElementNameExtension extends Extension
 {
-
     /**
      * @param string      $type
      * @param FileBuilder $builder
@@ -49,10 +43,9 @@ class AddFullElementNameExtension extends Extension
             if ($element instanceof Class_) {
                 $modifiers = $element->isAbstract() ? 'abstract' : '';
                 $modifiers = $element->isFinal() ? ' final' : $modifiers;
-                $builder->addLine(':php:`' . $modifiers . ' class ' . RstBuilder::escape($builder->getElement()->getName()) . ' {}`');
+                $builder->addLine(':php:`'.$modifiers.' class '.RstBuilder::escape($builder->getElement()->getName()).' {}`');
                 $builder->addLine();
             }
         }
     }
-
 }

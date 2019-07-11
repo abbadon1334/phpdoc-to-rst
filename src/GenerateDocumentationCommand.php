@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,7 +16,6 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst;
@@ -34,26 +31,23 @@ use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
 /**
- * Class GenerateDocumentationCommand
+ * Class GenerateDocumentationCommand.
  *
- * @package  JuliusHaertl\PHPDocToRst
  * @internal Only for use of the phpdoc-to-rst cli tool
  */
 class GenerateDocumentationCommand extends Command
 {
-
     protected function configure()
     {
         $this->setName('generate')->setDescription('Generate documentation')->setHelp('This command allows you to generate sphinx/rst based documentation from PHPDoc annotations.')->addArgument('target',
                 InputArgument::REQUIRED, 'Destination for the generated rst files')->addArgument('src',
                 InputArgument::IS_ARRAY, 'Source directories to parse')->addOption('public-only', 'p',
-                InputOption::VALUE_NONE)->addOption('show-private', NULL,
+                InputOption::VALUE_NONE)->addOption('show-private', null,
                 InputOption::VALUE_NONE)->addOption('element-toc', 't',
-                InputOption::VALUE_NONE)->addOption('repo-github', NULL, InputOption::VALUE_REQUIRED,
+                InputOption::VALUE_NONE)->addOption('repo-github', null, InputOption::VALUE_REQUIRED,
                 'Github URL of the projects git repository (requires --repo-base as well)',
-                false)->addOption('repo-base', NULL, InputOption::VALUE_REQUIRED,
+                false)->addOption('repo-base', null, InputOption::VALUE_REQUIRED,
                 'Base path of the project git repository', false);
-
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
@@ -82,7 +76,7 @@ class GenerateDocumentationCommand extends Command
         if ($input->getOption('repo-github') && $input->getOption('repo-base')) {
             $apiDocBuilder->addExtension(GithubLocationExtension::class, [
                 $input->getOption('repo-base'),
-                $input->getOption('repo-github')
+                $input->getOption('repo-github'),
             ]);
         }
         $apiDocBuilder->build();

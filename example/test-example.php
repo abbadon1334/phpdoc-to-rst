@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author Julius Härtl <jus@bitgrid.net>
- *
  * @license GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,19 +16,16 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
-
-include __DIR__ . '/../vendor/autoload.php';
+include __DIR__.'/../vendor/autoload.php';
 
 use JuliusHaertl\PHPDocToRst\ApiDocBuilder;
 
-$src = [__DIR__ . '/../src'];
-$dst = __DIR__ . '/../tests/test-project-doc';
+$src = [__DIR__.'/../src'];
+$dst = __DIR__.'/../tests/test-project-doc';
 
 $apiDocBuilder = new ApiDocBuilder($src, $dst);
 $apiDocBuilder->setVerboseOutput(true);
 $apiDocBuilder->setDebugOutput(true);
 $apiDocBuilder->addExtension(\JuliusHaertl\PHPDocToRst\Extension\InterfaceImplementors::class);
 $apiDocBuilder->build();
-

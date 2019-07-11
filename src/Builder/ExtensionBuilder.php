@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: jus
  * Date: 11.10.17
- * Time: 23:02
+ * Time: 23:02.
  */
 
 namespace JuliusHaertl\PHPDocToRst\Builder;
@@ -12,7 +12,6 @@ use JuliusHaertl\PHPDocToRst\Extension\Extension;
 
 trait ExtensionBuilder
 {
-
     /** @var Extension[] */
     protected $extensions;
 

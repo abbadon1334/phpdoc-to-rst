@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,7 +16,6 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Builder;
@@ -28,13 +25,10 @@ use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\File;
 
 /**
- * Abstract building class to build sphinxcontrib-phpdomain from a php file
- *
- * @package JuliusHaertl\PHPDocToRst\Builder
+ * Abstract building class to build sphinxcontrib-phpdomain from a php file.
  */
 abstract class FileBuilder extends PhpDomainBuilder
 {
-
     /** @var File */
     protected $file;
 
@@ -47,12 +41,12 @@ abstract class FileBuilder extends PhpDomainBuilder
     public function __construct($file, $element, $extensions)
     {
         parent::__construct($extensions);
-        $this->file    = $file;
+        $this->file = $file;
         $this->element = $element;
         $this->render();
     }
 
-    protected abstract function render();
+    abstract protected function render();
 
     /**
      * @return Element that is used to build the rst file
@@ -69,5 +63,4 @@ abstract class FileBuilder extends PhpDomainBuilder
     {
         return $this->file;
     }
-
 }

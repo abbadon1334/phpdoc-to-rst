@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,11 +16,9 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
-
 
 use JuliusHaertl\PHPDocToRst\Builder\ExtensionBuilder;
 use phpDocumentor\Reflection\Element;
@@ -30,7 +26,6 @@ use phpDocumentor\Reflection\Php\Project;
 
 abstract class Extension
 {
-
     /** @var Project */
     protected $project;
 
@@ -39,18 +34,17 @@ abstract class Extension
 
     public function __construct(Project $project, $arguments = [])
     {
-        $this->project   = $project;
+        $this->project = $project;
         $this->arguments = $arguments;
     }
 
     /**
      * Method that will be ran before generating any documentation files
      * This is useful for preparing own data structures
-     * to be used in the output documentation
+     * to be used in the output documentation.
      */
     public function prepare()
     {
-
     }
 
     /**
@@ -68,7 +62,6 @@ abstract class Extension
      */
     public function render($type, &$builder, $element)
     {
-
     }
 
     /**
@@ -90,5 +83,4 @@ abstract class Extension
     {
         return true;
     }
-
 }
