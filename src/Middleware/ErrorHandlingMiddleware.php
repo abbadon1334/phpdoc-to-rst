@@ -24,7 +24,6 @@ use Exception;
 use JuliusHaertl\PHPDocToRst\ApiDocBuilder;
 use phpDocumentor\Reflection\Middleware\Command;
 use phpDocumentor\Reflection\Middleware\Middleware;
-use phpDocumentor\Reflection\Php\Factory\File\CreateCommand;
 
 /**
  * Class ErrorHandlingMiddleware.
@@ -43,8 +42,8 @@ final class ErrorHandlingMiddleware implements Middleware
     /**
      * Executes this middleware class.
      *
-     * @param Command $command
-     * @param callable                                     $next
+     * @param Command  $command
+     * @param callable $next
      *
      * @return object
      */
