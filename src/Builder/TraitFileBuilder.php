@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,19 +16,14 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Builder;
 
-use phpDocumentor\Reflection\DocBlock\Tags\Param;
-use phpDocumentor\Reflection\Php\Argument;
-use phpDocumentor\Reflection\Php\Class_;
 use phpDocumentor\Reflection\Php\Trait_;
 
 class TraitFileBuilder extends FileBuilder
 {
-
     protected function render()
     {
         /** @var Trait_ $trait */
@@ -52,5 +45,4 @@ class TraitFileBuilder extends FileBuilder
 
         $this->addMethods($trait->getMethods());
     }
-
 }

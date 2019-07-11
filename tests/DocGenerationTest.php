@@ -14,9 +14,8 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
 {
     public function testBuildDocumentation()
     {
-
-        $src = [__DIR__ . '/../src'];
-        $dst = __DIR__ . '/../docs/api';
+        $src = [__DIR__.'/../src'];
+        $dst = __DIR__.'/../docs/api';
 
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
         $apiDocBuilder->setVerboseOutput(true);
@@ -27,9 +26,8 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
 
     public function testDocumentingSelf()
     {
-
-        $src = [__DIR__ . '/../src'];
-        $dst = __DIR__ . '/../tests/self-doc';
+        $src = [__DIR__.'/../src'];
+        $dst = __DIR__.'/../tests/self-doc';
 
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
         $apiDocBuilder->setVerboseOutput(true);
@@ -40,9 +38,8 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
 
     public function testDocumentingPSR()
     {
-
-        $src = [__DIR__ . '/../vendor/psr'];
-        $dst = __DIR__ . '/../tests/psr-doc';
+        $src = [__DIR__.'/../vendor/psr'];
+        $dst = __DIR__.'/../tests/psr-doc';
 
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
         $apiDocBuilder->setVerboseOutput(true);
@@ -53,8 +50,8 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
 
     public function testDocumentingDocumentor()
     {
-        $src = [__DIR__ . '/../vendor/phpdocumentor'];
-        $dst = __DIR__ . '/../tests/documentor-doc';
+        $src = [__DIR__.'/../vendor/phpdocumentor'];
+        $dst = __DIR__.'/../tests/documentor-doc';
 
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
         $apiDocBuilder->setVerboseOutput(true);
@@ -65,8 +62,8 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
 
     public function testDocumentingWithExtension()
     {
-        $src = [__DIR__ . '/../src'];
-        $dst = __DIR__ . '/../tests/self-doc';
+        $src = [__DIR__.'/../src'];
+        $dst = __DIR__.'/../tests/self-doc';
 
         $apiDocBuilder = new ApiDocBuilder($src, $dst);
         $apiDocBuilder->setVerboseOutput(true);
@@ -78,7 +75,7 @@ class DocGenerationTest extends PHPUnit_Framework_TestCase
         $apiDocBuilder->addExtension(GithubLocationExtension::class, [
             'http://github.com/abbadon1334',
             'phpdoc-to-rst',
-            'master'
+            'master',
         ]);
         $apiDocBuilder->build();
     }

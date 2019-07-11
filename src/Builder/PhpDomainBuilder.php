@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,7 +16,6 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Builder;
@@ -42,17 +39,14 @@ use phpDocumentor\Reflection\Php\Property;
 use phpDocumentor\Reflection\Php\Trait_;
 
 /**
- * Class to build reStructuredText file with sphinxcontrib-phpdomain syntax
- *
- * @package JuliusHaertl\PHPDocToRst\Builder
+ * Class to build reStructuredText file with sphinxcontrib-phpdomain syntax.
  */
 class PhpDomainBuilder extends RstBuilder
 {
-
-    const SECTION_BEFORE_DESCRIPTION = self::class . '::SECTION_BEFORE_DESCRIPTION';
-    const SECTION_AFTER_DESCRIPTION  = self::class . '::SECTION_AFTER_DESCRIPTION';
-    const SECTION_AFTER_TITLE        = self::class . '::SECTION_AFTER_TITLE';
-    const SECTION_AFTER_INTRODUCTION = self::class . '::SECTION_AFTER_INTRODUCTION';
+    const SECTION_BEFORE_DESCRIPTION = self::class.'::SECTION_BEFORE_DESCRIPTION';
+    const SECTION_AFTER_DESCRIPTION = self::class.'::SECTION_AFTER_DESCRIPTION';
+    const SECTION_AFTER_TITLE = self::class.'::SECTION_AFTER_TITLE';
+    const SECTION_AFTER_INTRODUCTION = self::class.'::SECTION_AFTER_INTRODUCTION';
 
     use ExtensionBuilder {
         ExtensionBuilder::__construct as private __extensionConstructor;
@@ -61,12 +55,12 @@ class PhpDomainBuilder extends RstBuilder
     public function __construct($extensions)
     {
         $this->__extensionConstructor($extensions);
-        $this->addMultiline('.. role:: php(code)' . PHP_EOL . ':language: php', true);
+        $this->addMultiline('.. role:: php(code)'.PHP_EOL.':language: php', true);
         $this->addLine();
     }
 
     /**
-     * Add namespace
+     * Add namespace.
      *
      * @param Element $element
      */
@@ -80,19 +74,18 @@ class PhpDomainBuilder extends RstBuilder
             $modifiers = $element->isAbstract() ? ' abstract' : '';
             $modifiers = $element->isFinal() ? ' final' : $modifiers;
             if ($modifiers !== '') {
-                $this->addLine('.. rst-class:: ' . $modifiers)->addLine();
+                $this->addLine('.. rst-class:: '.$modifiers)->addLine();
             }
         }
 
         $this->callExtensions(self::SECTION_AFTER_TITLE, $element);
-
 
         $this->beginPhpDomain($this->getTypeForClass($element), $element->getName(), false);
         $this->addLine();
     }
 
     /**
-     * Strip element name from Fqsen to return the namespace only
+     * Strip element name from Fqsen to return the namespace only.
      *
      * @param Element $element
      *
@@ -100,7 +93,7 @@ class PhpDomainBuilder extends RstBuilder
      */
     public static function getNamespace(Element $element)
     {
-        return substr($element->getFqsen(), 0, strlen($element->getFqsen()) - strlen('\\' . $element->getName()));
+        return substr($element->getFqsen(), 0, strlen($element->getFqsen()) - strlen('\\'.$element->getName()));
         //return str_replace('\\' . $element->getName(), '', $element->getFqsen());
     }
 
@@ -112,7 +105,7 @@ class PhpDomainBuilder extends RstBuilder
     public function beginPhpDomain($type, $name, $indent = true)
     {
         // FIXME: Add checks if it is properly ended
-        $this->addLine('.. php:' . $type . ':: ' . $name)->addLine();
+        $this->addLine('.. php:'.$type.':: '.$name)->addLine();
         if ($indent === true) {
             $this->indent();
         }
@@ -166,6 +159,7 @@ class PhpDomainBuilder extends RstBuilder
                 return false;
             }
         }
+
         return true;
     }
 
@@ -174,7 +168,7 @@ class PhpDomainBuilder extends RstBuilder
      */
     private function addConstant(Constant $constant)
     {
-        $this->beginPhpDomain('const', $constant->getName() . ' = ' . self::escape($constant->getValue()));
+        $this->beginPhpDomain('const', $constant->getName().' = '.self::escape($constant->getValue()));
         $docBlock = $constant->getDocBlock();
         $this->addDocBlockDescription($constant);
         if ($docBlock) {
@@ -192,26 +186,27 @@ class PhpDomainBuilder extends RstBuilder
      */
     public function addDocBlockDescription($element)
     {
-        if ($element === NULL) {
+        if ($element === null) {
             return $this;
         }
         $docBlock = $element->getDocBlock();
         $this->callExtensions(self::SECTION_BEFORE_DESCRIPTION, $element);
-        if ($docBlock !== NULL && $docBlock->getSummary() !== '') {
+        if ($docBlock !== null && $docBlock->getSummary() !== '') {
             $this->addLine('.. rst-class:: phpdoc-description')->addLine();
             $this->indent();
             $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getSummary()))->addLine();
-            if ((string)$docBlock->getDescription() !== '') {
+            if ((string) $docBlock->getDescription() !== '') {
                 $this->addMultilineWithoutRendering(RstBuilder::escape($docBlock->getDescription()))->addLine();
             }
             $this->unindent();
         }
         $this->callExtensions(self::SECTION_AFTER_DESCRIPTION, $element);
+
         return $this;
     }
 
     /**
-     * @param string   $tagName Name of the tag to parse
+     * @param string   $tagName  Name of the tag to parse
      * @param DocBlock $docBlock
      */
     protected function addDocblockTag($tagName, DocBlock $docBlock)
@@ -228,13 +223,11 @@ class PhpDomainBuilder extends RstBuilder
 
         $tags = $docBlock->getTagsByName($tagName);
 
-        if(!in_array($tagName,$inclusion_tag_name))
-        {
+        if (!in_array($tagName, $inclusion_tag_name)) {
             return '';
         }
 
-        if(in_array($tagName,$inclusion_tag_name) && count($tags) === 0)
-        {
+        if (in_array($tagName, $inclusion_tag_name) && count($tags) === 0) {
             return '';
         }
 
@@ -242,47 +235,46 @@ class PhpDomainBuilder extends RstBuilder
             case 'return':
                 /** @var Return_ $return */
                 $return = $tags[0];
-                $this->addMultiline(':Returns: ' . self::typesToRst($return->getType()) . ' ' . RstBuilder::escape($return->getDescription()),
+                $this->addMultiline(':Returns: '.self::typesToRst($return->getType()).' '.RstBuilder::escape($return->getDescription()),
                     true);
                 break;
             case 'var':
                 /** @var DocBlock\Tags\Var_ $return */
                 $return = $tags[0];
-                $this->addMultiline(':Type: ' . self::typesToRst($return->getType()) . ' ' . RstBuilder::escape($return->getDescription()),
+                $this->addMultiline(':Type: '.self::typesToRst($return->getType()).' '.RstBuilder::escape($return->getDescription()),
                     true);
                 break;
             case 'throws':
                 /** @var Throws $tag */
                 foreach ($tags as $tag) {
-                    $this->addMultiline(':Throws: ' . self::typesToRst($tag->getType()) . ' ' . RstBuilder::escape($tag->getDescription()),
+                    $this->addMultiline(':Throws: '.self::typesToRst($tag->getType()).' '.RstBuilder::escape($tag->getDescription()),
                         true);
                 }
                 break;
             case 'since':
                 /** @var Since $return */
                 $return = $tags[0];
-                $this->addMultiline(':Since: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()),
+                $this->addMultiline(':Since: '.$return->getVersion().' '.RstBuilder::escape($return->getDescription()),
                     true);
                 break;
             case 'deprecated':
                 /** @var Deprecated $return */
                 $return = $tags[0];
-                $this->addMultiline(':Deprecated: ' . $return->getVersion() . ' ' . RstBuilder::escape($return->getDescription()),
+                $this->addMultiline(':Deprecated: '.$return->getVersion().' '.RstBuilder::escape($return->getDescription()),
                     true);
                 break;
             case 'see':
                 /** @var See $return */
                 $return = $tags[0];
-                $this->addMultiline(':See: ' . self::typesToRst($return->getReference()) . ' ' . RstBuilder::escape($return->getDescription()),
+                $this->addMultiline(':See: '.self::typesToRst($return->getReference()).' '.RstBuilder::escape($return->getDescription()),
                     true);
                 break;
             case 'license':
                 /** @var DocBlock\Tags\BaseTag $return */
                 $return = $tags[0];
-                $this->addMultiline(':License: ' . RstBuilder::escape($return->getDescription()), true);
+                $this->addMultiline(':License: '.RstBuilder::escape($return->getDescription()), true);
                 break;
         }
-
     }
 
     /**
@@ -311,22 +303,23 @@ class PhpDomainBuilder extends RstBuilder
             'true',
             'self',
             'static',
-            '$this'
+            '$this',
         ];
-        $types     = explode('|', $typesString);
-        $result    = '';
-        /** @var string $type */
+        $types = explode('|', $typesString);
+        $result = '';
+        /* @var string $type */
         foreach ($types as $typeFull) {
             $type = str_replace('[]', '', $typeFull);
             if (in_array($type, $whitelist, true)) {
-                $result .= $typeFull . ' | ';
+                $result .= $typeFull.' | ';
                 continue;
             }
             if (0 === strpos($type, '\\')) {
                 $type = substr($type, 1);
             }
-            $result .= ':any:`' . RstBuilder::escape($typeFull) . ' <' . RstBuilder::escape($type) . '>` | ';
+            $result .= ':any:`'.RstBuilder::escape($typeFull).' <'.RstBuilder::escape($type).'>` | ';
         }
+
         return substr($result, 0, -3);
     }
 
@@ -362,7 +355,7 @@ class PhpDomainBuilder extends RstBuilder
     private function addProperty(Property $property)
     {
         $modifiers = $property->isStatic() ? '' : ' static';
-        $this->beginPhpDomain('attr', $property->getVisibility() . $modifiers . ' ' . $property->getName());
+        $this->beginPhpDomain('attr', $property->getVisibility().$modifiers.' '.$property->getName());
         $docBlock = $property->getDocBlock();
         $this->addDocBlockDescription($property);
         if ($docBlock) {
@@ -380,14 +373,14 @@ class PhpDomainBuilder extends RstBuilder
     {
         if ($element instanceof Class_) {
             $parent = $element->getParent();
-            if ($parent !== NULL) {
-                $this->addFieldList('Parent', $parent !== NULL ? $this->getLink('class', $parent) : '');
+            if ($parent !== null) {
+                $this->addFieldList('Parent', $parent !== null ? $this->getLink('class', $parent) : '');
             }
         }
         if ($element instanceof Interface_) {
             $parents = $element->getParents();
             foreach ($parents as $parent) {
-                $this->addFieldList('Parent', $parent !== NULL ? $this->getLink('interface', $parent) : '');
+                $this->addFieldList('Parent', $parent !== null ? $this->getLink('interface', $parent) : '');
             }
         }
     }
@@ -401,10 +394,11 @@ class PhpDomainBuilder extends RstBuilder
     public static function getLink($type, $fqsen, $description = '')
     {
         if ($description !== '') {
-            return ':php:' . $type . ':`' . RstBuilder::escape($description) . '<' . RstBuilder::escape(substr($fqsen,
-                    1)) . '>`';
+            return ':php:'.$type.':`'.RstBuilder::escape($description).'<'.RstBuilder::escape(substr($fqsen,
+                    1)).'>`';
         }
-        return ':php:' . $type . ':`' . RstBuilder::escape(substr($fqsen, 1)) . '`';
+
+        return ':php:'.$type.':`'.RstBuilder::escape(substr($fqsen, 1)).'`';
     }
 
     /**
@@ -414,7 +408,7 @@ class PhpDomainBuilder extends RstBuilder
     {
         $usedTraits = '';
         foreach ($element->getUsedTraits() as $trait) {
-            $usedTraits .= $this->getLink('trait', $trait) . ' ';
+            $usedTraits .= $this->getLink('trait', $trait).' ';
         }
         if ($usedTraits !== '') {
             $this->addFieldList('Used traits', $usedTraits);
@@ -439,10 +433,10 @@ class PhpDomainBuilder extends RstBuilder
         if (!$this->shouldRenderElement($method)) {
             return;
         }
-        $docBlock   = $method->getDocBlock();
-        $params     = [];
+        $docBlock = $method->getDocBlock();
+        $params = [];
         $deprecated = [];
-        if ($docBlock !== NULL) {
+        if ($docBlock !== null) {
             /** @var Param $param */
             foreach ($docBlock->getTagsByName('param') as $param) {
                 $params[$param->getVariableName()] = $param;
@@ -450,23 +444,23 @@ class PhpDomainBuilder extends RstBuilder
             $deprecated = $docBlock->getTagsByName('deprecated');
         }
 
-        $modifiers  = $method->getVisibility();
-        $modifiers  .= $method->isAbstract() ? ' abstract' : '';
-        $modifiers  .= $method->isFinal() ? ' final' : '';
-        $modifiers  .= $method->isStatic() ? ' static' : '';
+        $modifiers = $method->getVisibility();
+        $modifiers .= $method->isAbstract() ? ' abstract' : '';
+        $modifiers .= $method->isFinal() ? ' final' : '';
+        $modifiers .= $method->isStatic() ? ' static' : '';
         $deprecated = count($deprecated) > 0 ? ' deprecated' : '';
-        $this->addLine('.. rst-class:: ' . $modifiers . $deprecated)->addLine();
+        $this->addLine('.. rst-class:: '.$modifiers.$deprecated)->addLine();
         $this->indent();
 
         $args = $this->processMethodArgumentTypes($method);
-        $this->beginPhpDomain('method', $modifiers . ' ' . $method->getName() . '(' . $args . ')');
+        $this->beginPhpDomain('method', $modifiers.' '.$method->getName().'('.$args.')');
         $this->addDocBlockDescription($method);
         $this->addLine();
         if (!empty($params)) {
             $parameterDetails = $this->processMethodArgumentDocs($method, $params);
             $this->addFieldList('Parameters', $parameterDetails);
         }
-        if ($docBlock !== NULL) {
+        if ($docBlock !== null) {
             foreach ($docBlock->getTags() as $tag) {
                 $this->addDocblockTag($tag->getName(), $docBlock);
             }
@@ -490,7 +484,7 @@ class PhpDomainBuilder extends RstBuilder
             }
             /** @var Param $param */
             $param = $params[$argument->getName()];
-            if ($param !== NULL) {
+            if ($param !== null) {
                 $typString = $param->getType();
                 // Remove first \ to allow references
                 if (0 === strpos($typString, '\\')) {
@@ -501,14 +495,15 @@ class PhpDomainBuilder extends RstBuilder
                 if ($argument->isVariadic()) {
                     $paramItem .= '...';
                 }
-                $paramItem .= '$' . $argument->getName() . '** ';
-                if ($typString !== NULL) {
-                    $paramItem .= '(' . self::typesToRst($typString) . ') ';
+                $paramItem .= '$'.$argument->getName().'** ';
+                if ($typString !== null) {
+                    $paramItem .= '('.self::typesToRst($typString).') ';
                 }
-                $paramItem        .= ' ' . $param->getDescription();
-                $parameterDetails .= $paramItem . PHP_EOL;
+                $paramItem .= ' '.$param->getDescription();
+                $parameterDetails .= $paramItem.PHP_EOL;
             }
         }
+
         return $parameterDetails;
     }
 
@@ -522,9 +517,10 @@ class PhpDomainBuilder extends RstBuilder
         $args = '';
         /** @var Argument $argument */
         foreach ($method->getArguments() as $argument) {
-            $args= $this->processMethodArgumentType($argument, $args);
+            $args = $this->processMethodArgumentType($argument, $args);
         }
         $args = substr($args, 0, -2);
+
         return $args;
     }
 
@@ -537,24 +533,23 @@ class PhpDomainBuilder extends RstBuilder
     private function processMethodArgumentType(Argument $argument, string $args): string
     {
         foreach ($argument->getType() as $type) {
-            $args .= self::escape($type) . '|';
+            $args .= self::escape($type).'|';
         }
-        $args = substr($args, 0, -1) . ' ';
+        $args = substr($args, 0, -1).' ';
         if ($argument->isVariadic()) {
             $args .= '...';
         }
         if ($argument->isByReference()) {
             $args .= '&';
         }
-        $args    .= '$' . $argument->getName();
+        $args .= '$'.$argument->getName();
         $default = $argument->getDefault();
-        if ($default !== NULL) {
+        if ($default !== null) {
             $default = $default === '' ? '""' : $default;
-            $args    .= '=' . self::escape($default);
+            $args .= '='.self::escape($default);
         }
         $args .= ', ';
+
         return $args;
     }
-
-
 }

@@ -1,9 +1,7 @@
 <?php
 /**
  * @copyright Copyright (c) 2017 Julius Härtl <jus@bitgrid.net>
- *
  * @author    Julius Härtl <jus@bitgrid.net>
- *
  * @license   GNU AGPL version 3 or any later version
  *
  *  This program is free software: you can redistribute it and/or modify
@@ -18,41 +16,38 @@
  *
  *  You should have received a copy of the GNU Affero General Public License
  *  along with this program. If not, see <http://www.gnu.org/licenses/>.
- *
  */
 
 namespace JuliusHaertl\PHPDocToRst\Extension;
 
 use phpDocumentor\Reflection\Element;
 use phpDocumentor\Reflection\Php\Class_;
-use phpDocumentor\Reflection\Php\Constant;
 use phpDocumentor\Reflection\Php\Method;
 use phpDocumentor\Reflection\Php\Property;
 
 /**
  * Do not render classes marked with phpDoc internal tag
- * Do only render public methods/properties
+ * Do only render public methods/properties.
  */
 class NoPrivateExtension extends Extension
 {
-
     public function shouldRenderElement(Element $element)
     {
         if ($element instanceof Class_) {
             /** @var Class_ $class */
             $class = $element;
-            if ($class->getDocBlock() !== NULL && $class->getDocBlock()->hasTag('ignore')) {
+            if ($class->getDocBlock() !== null && $class->getDocBlock()->hasTag('ignore')) {
                 return false;
             }
         }
         if ($element instanceof Method || $element instanceof Property) {
             /** @var Method|Property $class */
             $class = $element;
-            if ((string)$class->getVisibility() === 'private') {
+            if ((string) $class->getVisibility() === 'private') {
                 return false;
             }
         }
+
         return true;
     }
-
 }
