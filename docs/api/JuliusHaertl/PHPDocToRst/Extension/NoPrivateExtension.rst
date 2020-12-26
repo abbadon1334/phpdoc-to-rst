@@ -20,7 +20,7 @@ NoPrivateExtension
 		
 	
 	:Source:
-		`../../src/Extension/NoPrivateExtension.php#32 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/NoPrivateExtension.php#L32>`_
+		`/Extension/NoPrivateExtension.php#32 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/NoPrivateExtension.php#L32>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -44,7 +44,7 @@ Methods
 	.. php:method:: public shouldRenderElement( $element)
 	
 		:Source:
-			`../../src/Extension/NoPrivateExtension.php#34 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/NoPrivateExtension.php#L34>`_
+			`/Extension/NoPrivateExtension.php#34 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/NoPrivateExtension.php#L34>`_
 		
 		
 	

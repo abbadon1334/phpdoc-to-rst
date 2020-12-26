@@ -19,7 +19,7 @@ InterfaceImplementors
 		
 	
 	:Source:
-		`../../src/Extension/InterfaceImplementors.php#32 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/InterfaceImplementors.php#L32>`_
+		`/Extension/InterfaceImplementors.php#32 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/InterfaceImplementors.php#L32>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -39,6 +39,13 @@ Methods
 Properties
 ----------
 
+.. php:attr:: private static implementors
+
+	:Source:
+		`/Extension/InterfaceImplementors.php#34 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/InterfaceImplementors.php#L34>`_
+	
+
+
 Methods
 -------
 
@@ -47,7 +54,7 @@ Methods
 	.. php:method:: public prepare()
 	
 		:Source:
-			`../../src/Extension/InterfaceImplementors.php#36 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/InterfaceImplementors.php#L36>`_
+			`/Extension/InterfaceImplementors.php#36 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/InterfaceImplementors.php#L36>`_
 		
 		
 	
@@ -58,7 +65,7 @@ Methods
 	.. php:method:: public render( $type, &$builder, $element)
 	
 		:Source:
-			`../../src/Extension/InterfaceImplementors.php#55 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/InterfaceImplementors.php#L55>`_
+			`/Extension/InterfaceImplementors.php#55 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/InterfaceImplementors.php#L55>`_
 		
 		
 		:Parameters:

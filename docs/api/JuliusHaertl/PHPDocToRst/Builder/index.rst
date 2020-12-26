@@ -18,14 +18,14 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
-	InterfaceFileBuilder <InterfaceFileBuilder>
-	NamespaceIndexBuilder <NamespaceIndexBuilder>
 	TraitFileBuilder <TraitFileBuilder>
-	ClassFileBuilder <ClassFileBuilder>
-	MainIndexBuilder <MainIndexBuilder>
+	NamespaceIndexBuilder <NamespaceIndexBuilder>
 	PhpDomainBuilder <PhpDomainBuilder>
 	RstBuilder <RstBuilder>
+	InterfaceFileBuilder <InterfaceFileBuilder>
+	ClassFileBuilder <ClassFileBuilder>
 	FileBuilder <FileBuilder>
+	MainIndexBuilder <MainIndexBuilder>
 
 
 Traits

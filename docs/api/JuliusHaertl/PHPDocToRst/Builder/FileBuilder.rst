@@ -21,7 +21,7 @@ FileBuilder
 		
 	
 	:Source:
-		`../../src/Builder/FileBuilder.php#30 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L30>`_
+		`/Builder/FileBuilder.php#30 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L30>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\PhpDomainBuilder`
@@ -46,7 +46,7 @@ Properties
 .. php:attr:: protected static file
 
 	:Source:
-		`../../src/Builder/FileBuilder.php#33 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L33>`_
+		`/Builder/FileBuilder.php#33 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L33>`_
 	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 
 
@@ -54,7 +54,7 @@ Properties
 .. php:attr:: protected static element
 
 	:Source:
-		`../../src/Builder/FileBuilder.php#36 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L36>`_
+		`/Builder/FileBuilder.php#36 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L36>`_
 	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` 
 
@@ -62,7 +62,7 @@ Properties
 .. php:attr:: protected static extensions
 
 	:Source:
-		`../../src/Builder/FileBuilder.php#39 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L39>`_
+		`/Builder/FileBuilder.php#39 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L39>`_
 	
 	:Type: :any:`\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension\[\] <JuliusHaertl\\PHPDocToRst\\Extension\\Extension>` 
 
@@ -75,7 +75,7 @@ Methods
 	.. php:method:: public __construct( $file, $element, $extensions)
 	
 		:Source:
-			`../../src/Builder/FileBuilder.php#41 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L41>`_
+			`/Builder/FileBuilder.php#41 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L41>`_
 		
 		
 	
@@ -86,7 +86,7 @@ Methods
 	.. php:method:: protected abstract render()
 	
 		:Source:
-			`../../src/Builder/FileBuilder.php#49 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L49>`_
+			`/Builder/FileBuilder.php#49 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L49>`_
 		
 		
 	
@@ -97,7 +97,7 @@ Methods
 	.. php:method:: public getElement()
 	
 		:Source:
-			`../../src/Builder/FileBuilder.php#54 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L54>`_
+			`/Builder/FileBuilder.php#54 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L54>`_
 		
 		
 		:Returns: :any:`\\phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>` that is used to build the rst file
@@ -109,7 +109,7 @@ Methods
 	.. php:method:: public getFile()
 	
 		:Source:
-			`../../src/Builder/FileBuilder.php#62 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/FileBuilder.php#L62>`_
+			`/Builder/FileBuilder.php#62 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/FileBuilder.php#L62>`_
 		
 		
 		:Returns: :any:`\\phpDocumentor\\Reflection\\Php\\File <phpDocumentor\\Reflection\\Php\\File>` 

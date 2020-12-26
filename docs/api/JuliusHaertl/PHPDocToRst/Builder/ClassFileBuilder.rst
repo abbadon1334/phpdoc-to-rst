@@ -14,7 +14,7 @@ ClassFileBuilder
 
 
 	:Source:
-		`../../src/Builder/ClassFileBuilder.php#26 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ClassFileBuilder.php#L26>`_
+		`/Builder/ClassFileBuilder.php#26 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ClassFileBuilder.php#L26>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder`
@@ -39,7 +39,7 @@ Methods
 	.. php:method:: protected render()
 	
 		:Source:
-			`../../src/Builder/ClassFileBuilder.php#28 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ClassFileBuilder.php#L28>`_
+			`/Builder/ClassFileBuilder.php#28 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ClassFileBuilder.php#L28>`_
 		
 		
 	
@@ -50,7 +50,7 @@ Methods
 	.. php:method:: protected addImplementedInterfaces( $element)
 	
 		:Source:
-			`../../src/Builder/ClassFileBuilder.php#57 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ClassFileBuilder.php#L57>`_
+			`/Builder/ClassFileBuilder.php#57 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ClassFileBuilder.php#L57>`_
 		
 		
 		:Parameters:

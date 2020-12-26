@@ -16,7 +16,7 @@ Extension
 
 
 	:Source:
-		`../../src/Extension/Extension.php#27 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L27>`_
+		`/Extension/Extension.php#27 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L27>`_
 	
 
 
@@ -39,7 +39,7 @@ Properties
 .. php:attr:: protected static project
 
 	:Source:
-		`../../src/Extension/Extension.php#30 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L30>`_
+		`/Extension/Extension.php#30 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L30>`_
 	
 	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\Project <phpDocumentor\\Reflection\\Php\\Project>` 
 
@@ -47,7 +47,7 @@ Properties
 .. php:attr:: protected static arguments
 
 	:Source:
-		`../../src/Extension/Extension.php#33 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L33>`_
+		`/Extension/Extension.php#33 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L33>`_
 	
 	:Type: array 
 
@@ -60,7 +60,7 @@ Methods
 	.. php:method:: public __construct( $project, $arguments=\[\])
 	
 		:Source:
-			`../../src/Extension/Extension.php#35 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L35>`_
+			`/Extension/Extension.php#35 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L35>`_
 		
 		
 	
@@ -78,7 +78,7 @@ Methods
 			
 		
 		:Source:
-			`../../src/Extension/Extension.php#46 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L46>`_
+			`/Extension/Extension.php#46 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L46>`_
 		
 		
 	
@@ -101,7 +101,7 @@ Methods
 			
 		
 		:Source:
-			`../../src/Extension/Extension.php#63 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L63>`_
+			`/Extension/Extension.php#63 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L63>`_
 		
 		
 		:Parameters:
@@ -126,7 +126,7 @@ Methods
 			
 		
 		:Source:
-			`../../src/Extension/Extension.php#77 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L77>`_
+			`/Extension/Extension.php#77 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L77>`_
 		
 		
 		:Parameters:
@@ -142,7 +142,7 @@ Methods
 	.. php:method:: public shouldRenderIndex( $type, $element)
 	
 		:Source:
-			`../../src/Extension/Extension.php#82 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/Extension.php#L82>`_
+			`/Extension/Extension.php#82 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/Extension.php#L82>`_
 		
 		
 	

@@ -18,13 +18,13 @@ Classes
 .. toctree::
 	:maxdepth: 1
 	
-	Extension <Extension>
-	TocExtension <TocExtension>
-	AddFullElementNameExtension <AddFullElementNameExtension>
-	HideChildNamespaces <HideChildNamespaces>
-	InterfaceImplementors <InterfaceImplementors>
-	NoPrivateExtension <NoPrivateExtension>
-	GithubLocationExtension <GithubLocationExtension>
 	PublicOnlyExtension <PublicOnlyExtension>
+	AddFullElementNameExtension <AddFullElementNameExtension>
+	TocExtension <TocExtension>
+	HideChildNamespaces <HideChildNamespaces>
+	GithubLocationExtension <GithubLocationExtension>
+	NoPrivateExtension <NoPrivateExtension>
+	Extension <Extension>
+	InterfaceImplementors <InterfaceImplementors>
 
 

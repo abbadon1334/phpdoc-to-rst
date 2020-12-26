@@ -19,7 +19,7 @@ MainIndexBuilder
 		
 	
 	:Source:
-		`../../src/Builder/MainIndexBuilder.php#28 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/MainIndexBuilder.php#L28>`_
+		`/Builder/MainIndexBuilder.php#28 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/MainIndexBuilder.php#L28>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Builder\\RstBuilder`
@@ -39,6 +39,14 @@ Methods
 Properties
 ----------
 
+.. php:attr:: private static namespaces
+
+	:Source:
+		`/Builder/MainIndexBuilder.php#31 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/MainIndexBuilder.php#L31>`_
+	
+	:Type: :any:`\\phpDocumentor\\Reflection\\Php\\Namespace\_\[\] <phpDocumentor\\Reflection\\Php\\Namespace\_>` 
+
+
 Methods
 -------
 
@@ -47,7 +55,7 @@ Methods
 	.. php:method:: public __construct( $namespaces)
 	
 		:Source:
-			`../../src/Builder/MainIndexBuilder.php#33 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/MainIndexBuilder.php#L33>`_
+			`/Builder/MainIndexBuilder.php#33 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/MainIndexBuilder.php#L33>`_
 		
 		
 	
@@ -58,7 +66,7 @@ Methods
 	.. php:method:: public render()
 	
 		:Source:
-			`../../src/Builder/MainIndexBuilder.php#38 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/MainIndexBuilder.php#L38>`_
+			`/Builder/MainIndexBuilder.php#38 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/MainIndexBuilder.php#L38>`_
 		
 		
 	

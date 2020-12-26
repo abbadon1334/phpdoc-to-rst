@@ -20,7 +20,7 @@ TocExtension
 		
 	
 	:Source:
-		`../../src/Extension/TocExtension.php#34 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/TocExtension.php#L34>`_
+		`/Extension/TocExtension.php#34 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/TocExtension.php#L34>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -44,7 +44,7 @@ Methods
 	.. php:method:: public render( $type, &$builder, $element)
 	
 		:Source:
-			`../../src/Extension/TocExtension.php#40 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/TocExtension.php#L40>`_
+			`/Extension/TocExtension.php#40 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/TocExtension.php#L40>`_
 		
 		
 		:Parameters:

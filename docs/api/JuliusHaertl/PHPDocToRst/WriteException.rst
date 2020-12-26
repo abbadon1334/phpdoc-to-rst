@@ -19,7 +19,7 @@ WriteException
 		
 	
 	:Source:
-		`../../src/WriteException.php#28 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/WriteException.php#L28>`_
+		`/WriteException.php#28 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//WriteException.php#L28>`_
 	
 	:Parent:
 		:php:class:`Exception`

@@ -19,7 +19,7 @@ HideChildNamespaces
 		
 	
 	:Source:
-		`../../src/Extension/HideChildNamespaces.php#28 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/HideChildNamespaces.php#L28>`_
+		`/Extension/HideChildNamespaces.php#28 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/HideChildNamespaces.php#L28>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -43,7 +43,7 @@ Methods
 	.. php:method:: public shouldRenderIndex( $type, $element)
 	
 		:Source:
-			`../../src/Extension/HideChildNamespaces.php#30 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/HideChildNamespaces.php#L30>`_
+			`/Extension/HideChildNamespaces.php#30 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/HideChildNamespaces.php#L30>`_
 		
 		
 	

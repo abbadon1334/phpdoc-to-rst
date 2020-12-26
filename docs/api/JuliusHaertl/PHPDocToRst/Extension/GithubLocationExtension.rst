@@ -24,7 +24,7 @@ GithubLocationExtension
 		
 	
 	:Source:
-		`../../src/Extension/GithubLocationExtension.php#37 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L37>`_
+		`/Extension/GithubLocationExtension.php#37 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L37>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -48,21 +48,21 @@ Properties
 .. php:attr:: protected static basePath
 
 	:Source:
-		`../../src/Extension/GithubLocationExtension.php#39 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L39>`_
+		`/Extension/GithubLocationExtension.php#39 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L39>`_
 	
 
 
 .. php:attr:: protected static githubRepo
 
 	:Source:
-		`../../src/Extension/GithubLocationExtension.php#40 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L40>`_
+		`/Extension/GithubLocationExtension.php#40 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L40>`_
 	
 
 
 .. php:attr:: protected static branch
 
 	:Source:
-		`../../src/Extension/GithubLocationExtension.php#41 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L41>`_
+		`/Extension/GithubLocationExtension.php#41 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L41>`_
 	
 
 
@@ -74,7 +74,7 @@ Methods
 	.. php:method:: public prepare()
 	
 		:Source:
-			`../../src/Extension/GithubLocationExtension.php#43 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L43>`_
+			`/Extension/GithubLocationExtension.php#43 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L43>`_
 		
 		
 	
@@ -85,7 +85,7 @@ Methods
 	.. php:method:: public render( $type, &$builder, $element)
 	
 		:Source:
-			`../../src/Extension/GithubLocationExtension.php#60 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/GithubLocationExtension.php#L60>`_
+			`/Extension/GithubLocationExtension.php#60 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L60>`_
 		
 		
 		:Parameters:
@@ -93,6 +93,17 @@ Methods
 			* **$builder** (:any:`JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder <JuliusHaertl\\PHPDocToRst\\Builder\\FileBuilder>`)  
 			* **$element** (:any:`phpDocumentor\\Reflection\\Element <phpDocumentor\\Reflection\\Element>`)  
 
+		
+	
+	
+
+.. rst-class:: private
+
+	.. php:method:: private getGithubLink( $file, $line=1, $branch=\'master\')
+	
+		:Source:
+			`/Extension/GithubLocationExtension.php#77 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/GithubLocationExtension.php#L77>`_
+		
 		
 	
 	

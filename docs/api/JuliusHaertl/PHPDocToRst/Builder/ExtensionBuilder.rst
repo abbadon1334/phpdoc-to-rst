@@ -14,7 +14,7 @@ ExtensionBuilder
 
 
 	:Source:
-		`../../src/Builder/ExtensionBuilder.php#13 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ExtensionBuilder.php#L13>`_
+		`/Builder/ExtensionBuilder.php#13 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ExtensionBuilder.php#L13>`_
 	
 
 Properties
@@ -23,7 +23,7 @@ Properties
 .. php:attr:: protected static extensions
 
 	:Source:
-		`../../src/Builder/ExtensionBuilder.php#16 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ExtensionBuilder.php#L16>`_
+		`/Builder/ExtensionBuilder.php#16 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ExtensionBuilder.php#L16>`_
 	
 	:Type: :any:`\\JuliusHaertl\\PHPDocToRst\\Extension\\Extension\[\] <JuliusHaertl\\PHPDocToRst\\Extension\\Extension>` 
 
@@ -36,7 +36,7 @@ Methods
 	.. php:method:: public __construct( $extensions)
 	
 		:Source:
-			`../../src/Builder/ExtensionBuilder.php#18 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ExtensionBuilder.php#L18>`_
+			`/Builder/ExtensionBuilder.php#18 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ExtensionBuilder.php#L18>`_
 		
 		
 	
@@ -47,7 +47,7 @@ Methods
 	.. php:method:: protected callExtensions( $type, $element)
 	
 		:Source:
-			`../../src/Builder/ExtensionBuilder.php#23 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Builder/ExtensionBuilder.php#L23>`_
+			`/Builder/ExtensionBuilder.php#23 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Builder/ExtensionBuilder.php#L23>`_
 		
 		
 	

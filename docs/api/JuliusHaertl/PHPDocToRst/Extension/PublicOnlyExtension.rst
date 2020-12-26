@@ -20,7 +20,7 @@ PublicOnlyExtension
 		
 	
 	:Source:
-		`../../src/Extension/PublicOnlyExtension.php#32 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/PublicOnlyExtension.php#L32>`_
+		`/Extension/PublicOnlyExtension.php#32 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/PublicOnlyExtension.php#L32>`_
 	
 	:Parent:
 		:php:class:`JuliusHaertl\\PHPDocToRst\\Extension\\Extension`
@@ -44,7 +44,7 @@ Methods
 	.. php:method:: public shouldRenderElement( $element)
 	
 		:Source:
-			`../../src/Extension/PublicOnlyExtension.php#34 <https://github.com/abbadon1334/phpdoc-to-rst/blob/master/../../src/Extension/PublicOnlyExtension.php#L34>`_
+			`/Extension/PublicOnlyExtension.php#34 <http://github.com/abbadon1334/phpdoc-to-rst//blob/master//Extension/PublicOnlyExtension.php#L34>`_
 		
 		
 	
