@@ -1,12 +1,12 @@
 # phpdoc-to-rst
 
-[![Build Status](https://travis-ci.org/abbadon1334/phpdoc-to-rst.svg?branch=master)](https://travis-ci.org/abbadon1334/phpdoc-to-rst)
-[![Coverage Status](https://coveralls.io/repos/github/abbadon1334/phpdoc-to-rst/badge.svg?branch=master)](https://coveralls.io/github/abbadon1334/phpdoc-to-rst?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4b4264eb36ca49ed81d29f5102a64a39)](https://www.codacy.com/app/abbadon1334/phpdoc-to-rst?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abbadon1334/phpdoc-to-rst&amp;utm_campaign=Badge_Grade)
-
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/badges/build.png?b=master)](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/build-status/master)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/38b000f2f9754af9a110a93abdb710c9)](https://app.codacy.com/gh/abbadon1334/phpdoc-to-rst?utm_source=github.com&utm_medium=referral&utm_content=abbadon1334/phpdoc-to-rst&utm_campaign=Badge_Grade)
+[![Build Status](https://travis-ci.org/abbadon1334/phpdoc-to-rst.svg?branch=develop)](https://travis-ci.org/abbadon1334/phpdoc-to-rst)
+[![Coverage Status](https://coveralls.io/repos/github/abbadon1334/phpdoc-to-rst/badge.svg?branch=develop)](https://coveralls.io/github/abbadon1334/phpdoc-to-rst?branch=master)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/fe2ceefd5ceb42ba8993f6cd4917b230)](https://www.codacy.com/gh/abbadon1334/phpdoc-to-rst/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abbadon1334/phpdoc-to-rst&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/fe2ceefd5ceb42ba8993f6cd4917b230)](https://www.codacy.com/gh/abbadon1334/phpdoc-to-rst/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=abbadon1334/phpdoc-to-rst&amp;utm_campaign=Badge_Coverage)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/badges/quality-score.png?b=develop)](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/?branch=develop)
+[![Build Status](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/badges/build.png?b=develop)](https://scrutinizer-ci.com/g/abbadon1334/phpdoc-to-rst/build-status/develop)
 
 Forked and refactor by Francesco "Abbadon1334" Danti.
 
