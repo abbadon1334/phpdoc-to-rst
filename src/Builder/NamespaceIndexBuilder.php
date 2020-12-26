@@ -74,15 +74,21 @@ class NamespaceIndexBuilder extends PhpDomainBuilder
         /** @var Namespace_ $namespace */
         foreach ($this->namespaces as $namespace) {
             // check if not root and doesn't start with current namespace
-            if ($currentNamespaceFqsen !== '\\' && strpos((string) $namespace->getFqsen(),
-                    $currentNamespaceFqsen.'\\') !== 0) {
+            if ($currentNamespaceFqsen !== '\\' && strpos(
+                (string) $namespace->getFqsen(),
+                $currentNamespaceFqsen.'\\'
+            ) !== 0) {
                 continue;
             }
-            if ((string) $namespace->getFqsen() !== $currentNamespaceFqsen && strpos((string) $namespace->getFqsen(),
-                    $currentNamespaceFqsen) === 0) {
+            if ((string) $namespace->getFqsen() !== $currentNamespaceFqsen && strpos(
+                (string) $namespace->getFqsen(),
+                $currentNamespaceFqsen
+            ) === 0) {
                 // only keep first level children
-                $childrenPath = substr((string) $namespace->getFqsen(),
-                    strlen((string) $this->currentNamespace->getFqsen()) + 1);
+                $childrenPath = substr(
+                    (string) $namespace->getFqsen(),
+                    strlen((string) $this->currentNamespace->getFqsen()) + 1
+                );
                 if (strpos($childrenPath, '\\') === false) {
                     $this->childNamespaces[] = $namespace;
                 }
@@ -188,11 +194,11 @@ class NamespaceIndexBuilder extends PhpDomainBuilder
     private function getHeaderForType($type)
     {
         $headers = [self::RENDER_INDEX_NAMESPACE  => 'Namespaces',
-                    self::RENDER_INDEX_INTERFACES => 'Interfaces',
-                    self::RENDER_INDEX_CLASSES    => 'Classes',
-                    self::RENDER_INDEX_TRAITS     => 'Traits',
-                    self::RENDER_INDEX_FUNCTIONS  => 'Functions',
-                    self::RENDER_INDEX_CONSTANTS  => 'Constants',
+            self::RENDER_INDEX_INTERFACES         => 'Interfaces',
+            self::RENDER_INDEX_CLASSES            => 'Classes',
+            self::RENDER_INDEX_TRAITS             => 'Traits',
+            self::RENDER_INDEX_FUNCTIONS          => 'Functions',
+            self::RENDER_INDEX_CONSTANTS          => 'Constants',
         ];
 
         return $headers[$type];
@@ -202,8 +208,11 @@ class NamespaceIndexBuilder extends PhpDomainBuilder
     {
         $currentNamespaceFqsen = (string) $this->currentNamespace->getFqsen();
         $subPath = $entry;
-        if ($currentNamespaceFqsen !== '\\' && substr($entry, 0,
-                strlen($currentNamespaceFqsen)) === $currentNamespaceFqsen) {
+        if ($currentNamespaceFqsen !== '\\' && substr(
+            $entry,
+            0,
+            strlen($currentNamespaceFqsen)
+        ) === $currentNamespaceFqsen) {
             $subPath = substr($entry, strlen($currentNamespaceFqsen));
         }
         $path = substr(str_replace('\\', '/', $subPath), 1);
@@ -244,8 +253,10 @@ class NamespaceIndexBuilder extends PhpDomainBuilder
                         /** @var Param $param */
                         $param = $params[$argument->getName()];
                         if ($param !== null) {
-                            $this->addMultiline(':param '.self::escape($param->getType()).' $'.$argument->getName().': '.$param->getDescription(),
-                                true);
+                            $this->addMultiline(
+                                ':param '.self::escape($param->getType()).' $'.$argument->getName().': '.$param->getDescription(),
+                                true
+                            );
                         }
                     }
                 }
