@@ -48,10 +48,10 @@ class GenerateDocumentationCommand extends Command
             InputArgument::IS_ARRAY,
             'Source directories to parse'
         )->addOption(
-                    'public-only',
-                    'p',
-                    InputOption::VALUE_NONE
-                )->addOption(
+            'public-only',
+            'p',
+            InputOption::VALUE_NONE
+        )->addOption(
                     'show-private',
                     null,
                     InputOption::VALUE_NONE
