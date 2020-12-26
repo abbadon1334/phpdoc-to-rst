@@ -44,10 +44,10 @@ class GenerateDocumentationCommand extends Command
             InputArgument::REQUIRED,
             'Destination for the generated rst files'
         )->addArgument(
-                    'src',
-                    InputArgument::IS_ARRAY,
-                    'Source directories to parse'
-                )->addOption(
+            'src',
+            InputArgument::IS_ARRAY,
+            'Source directories to parse'
+        )->addOption(
                     'public-only',
                     'p',
                     InputOption::VALUE_NONE
