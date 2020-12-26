@@ -60,12 +60,12 @@ class GenerateDocumentationCommand extends Command
             't',
             InputOption::VALUE_NONE
         )->addOption(
-                    'repo-github',
-                    null,
-                    InputOption::VALUE_REQUIRED,
-                    'Github URL of the projects git repository (requires --repo-base as well)',
-                    false
-                )->addOption(
+            'repo-github',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Github URL of the projects git repository (requires --repo-base as well)',
+            false
+        )->addOption(
                     'repo-base',
                     null,
                     InputOption::VALUE_REQUIRED,
