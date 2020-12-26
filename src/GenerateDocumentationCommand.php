@@ -56,10 +56,10 @@ class GenerateDocumentationCommand extends Command
             null,
             InputOption::VALUE_NONE
         )->addOption(
-                    'element-toc',
-                    't',
-                    InputOption::VALUE_NONE
-                )->addOption(
+            'element-toc',
+            't',
+            InputOption::VALUE_NONE
+        )->addOption(
                     'repo-github',
                     null,
                     InputOption::VALUE_REQUIRED,
