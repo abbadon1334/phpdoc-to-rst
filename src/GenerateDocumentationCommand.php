@@ -66,12 +66,12 @@ class GenerateDocumentationCommand extends Command
             'Github URL of the projects git repository (requires --repo-base as well)',
             false
         )->addOption(
-                    'repo-base',
-                    null,
-                    InputOption::VALUE_REQUIRED,
-                    'Base path of the project git repository',
-                    false
-                );
+            'repo-base',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Base path of the project git repository',
+            false
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
