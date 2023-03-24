@@ -3,7 +3,7 @@
     "description": "Generate Sphinx/ReStructured documentation from PHPDoc",
     "type": "library",
     "require": {
-        "phpdocumentor/reflection": "~4.0",
+        "phpdocumentor/reflection": "~5.0",
 		"nikic/php-parser": "^4.0",
         "symfony/console": "^4.0"
     },
