@@ -52,26 +52,26 @@ class GenerateDocumentationCommand extends Command
             'p',
             InputOption::VALUE_NONE
         )->addOption(
-                'show-private',
-                null,
-                InputOption::VALUE_NONE
-            )->addOption(
-                'element-toc',
-                't',
-                InputOption::VALUE_NONE
-            )->addOption(
-                'repo-github',
-                null,
-                InputOption::VALUE_REQUIRED,
-                'Github URL of the projects git repository (requires --repo-base as well)',
-                false
-            )->addOption(
-                'repo-base',
-                null,
-                InputOption::VALUE_REQUIRED,
-                'Base path of the project git repository',
-                false
-            );
+            'show-private',
+            null,
+            InputOption::VALUE_NONE
+        )->addOption(
+            'element-toc',
+            't',
+            InputOption::VALUE_NONE
+        )->addOption(
+            'repo-github',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Github URL of the projects git repository (requires --repo-base as well)',
+            false
+        )->addOption(
+            'repo-base',
+            null,
+            InputOption::VALUE_REQUIRED,
+            'Base path of the project git repository',
+            false
+        );
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)

@@ -27,7 +27,6 @@ class ClassFileBuilder extends FileBuilder
 {
     protected function render()
     {
-
         /** @var Class_ $class */
         $class = $this->element;
 
